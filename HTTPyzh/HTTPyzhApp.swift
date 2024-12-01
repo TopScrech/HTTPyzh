@@ -1,10 +1,3 @@
-//
-//  HTTPyzhApp.swift
-//  HTTPyzh
-//
-//  Created by Sergei Saliukov on 11/12/2023.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -12,20 +5,21 @@ import SwiftData
 struct HTTPyzhApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            //            Item.self,
         ])
+        
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
+        
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Container()
         }
         .modelContainer(sharedModelContainer)
     }
