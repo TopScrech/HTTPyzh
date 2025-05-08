@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 90;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		F336BA3C2B2772D9002CBC12 /* Home View.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336BA3B2B2772D9002CBC12 /* Home View.swift */; };
 		F336BA3F2B278EAC002CBC12 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336BA3E2B278EAC002CBC12 /* Container.swift */; };
 		F336BA412B278F9F002CBC12 /* Request Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336BA402B278F9F002CBC12 /* Request Model.swift */; };
+		F3A0BB532DCCBB4B007B303B /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A0BB522DCCBB4B007B303B /* ScrechKit */; };
+		F3A0BB562DCCBBAD007B303B /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A0BB552DCCBBAD007B303B /* ScrechKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,17 +43,15 @@
 /* Begin PBXFrameworksBuildPhase section */
 		F336BA072B277291002CBC12 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
+				F3A0BB532DCCBB4B007B303B /* ScrechKit in Frameworks */,
+				F3A0BB562DCCBBAD007B303B /* ScrechKit in Frameworks */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F336BA1B2B277292002CBC12 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
@@ -117,8 +117,6 @@
 			);
 			buildRules = (
 			);
-			dependencies = (
-			);
 			name = HTTPyzh;
 			productName = HTTPyzh;
 			productReference = F336BA0A2B277291002CBC12 /* HTTPyzh.app */;
@@ -150,7 +148,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
-				LastUpgradeCheck = 1510;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					F336BA092B277291002CBC12 = {
 						CreatedOnToolsVersion = 15.1;
@@ -162,7 +160,6 @@
 				};
 			};
 			buildConfigurationList = F336BA052B277291002CBC12 /* Build configuration list for PBXProject "HTTPyzh" */;
-			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -170,6 +167,10 @@
 				Base,
 			);
 			mainGroup = F336BA012B277291002CBC12;
+			packageReferences = (
+				F3A0BB542DCCBBAD007B303B /* XCRemoteSwiftPackageReference "ScrechKit" */,
+			);
+			preferredProjectObjectVersion = 90;
 			productRefGroup = F336BA0B2B277291002CBC12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -183,40 +184,32 @@
 /* Begin PBXResourcesBuildPhase section */
 		F336BA082B277291002CBC12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F336BA142B277292002CBC12 /* Assets.xcassets in Resources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F336BA1C2B277292002CBC12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F336BA062B277291002CBC12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F336BA412B278F9F002CBC12 /* Request Model.swift in Sources */,
 				F336BA3C2B2772D9002CBC12 /* Home View.swift in Sources */,
 				F336BA3F2B278EAC002CBC12 /* Container.swift in Sources */,
 				F336BA0E2B277291002CBC12 /* HTTPyzhApp.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F336BA1A2B277292002CBC12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
 			files = (
 				F336BA232B277292002CBC12 /* HTTPyzhTests.swift in Sources */,
 			);
-			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
@@ -229,7 +222,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F336BA302B277292002CBC12 /* Debug */ = {
+		F336BA302B277292002CBC12 /* Debug configuration for PBXProject "HTTPyzh" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,7 +256,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -290,7 +285,7 @@
 			};
 			name = Debug;
 		};
-		F336BA312B277292002CBC12 /* Release */ = {
+		F336BA312B277292002CBC12 /* Release configuration for PBXProject "HTTPyzh" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -324,7 +319,9 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
@@ -343,7 +340,7 @@
 			};
 			name = Release;
 		};
-		F336BA332B277292002CBC12 /* Debug */ = {
+		F336BA332B277292002CBC12 /* Debug configuration for PBXNativeTarget "HTTPyzh" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -351,12 +348,13 @@
 				CODE_SIGN_ENTITLEMENTS = HTTPyzh/HTTPyzh.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HTTPyzh/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HTTPyzh;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -365,8 +363,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -382,7 +379,7 @@
 			};
 			name = Debug;
 		};
-		F336BA342B277292002CBC12 /* Release */ = {
+		F336BA342B277292002CBC12 /* Release configuration for PBXNativeTarget "HTTPyzh" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -390,12 +387,13 @@
 				CODE_SIGN_ENTITLEMENTS = HTTPyzh/HTTPyzh.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 8FQUA2F388;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HTTPyzh/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HTTPyzh;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -404,8 +402,7 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -421,14 +418,13 @@
 			};
 			name = Release;
 		};
-		F336BA362B277292002CBC12 /* Debug */ = {
+		F336BA362B277292002CBC12 /* Debug configuration for PBXNativeTarget "HTTPyzhTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FQUA2F388;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -444,14 +440,13 @@
 			};
 			name = Debug;
 		};
-		F336BA372B277292002CBC12 /* Release */ = {
+		F336BA372B277292002CBC12 /* Release configuration for PBXNativeTarget "HTTPyzhTests" */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FQUA2F388;
+				DEAD_CODE_STRIPPING = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
@@ -473,31 +468,51 @@
 		F336BA052B277291002CBC12 /* Build configuration list for PBXProject "HTTPyzh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F336BA302B277292002CBC12 /* Debug */,
-				F336BA312B277292002CBC12 /* Release */,
+				F336BA302B277292002CBC12 /* Debug configuration for PBXProject "HTTPyzh" */,
+				F336BA312B277292002CBC12 /* Release configuration for PBXProject "HTTPyzh" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F336BA322B277292002CBC12 /* Build configuration list for PBXNativeTarget "HTTPyzh" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F336BA332B277292002CBC12 /* Debug */,
-				F336BA342B277292002CBC12 /* Release */,
+				F336BA332B277292002CBC12 /* Debug configuration for PBXNativeTarget "HTTPyzh" */,
+				F336BA342B277292002CBC12 /* Release configuration for PBXNativeTarget "HTTPyzh" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 		F336BA352B277292002CBC12 /* Build configuration list for PBXNativeTarget "HTTPyzhTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F336BA362B277292002CBC12 /* Debug */,
-				F336BA372B277292002CBC12 /* Release */,
+				F336BA362B277292002CBC12 /* Debug configuration for PBXNativeTarget "HTTPyzhTests" */,
+				F336BA372B277292002CBC12 /* Release configuration for PBXNativeTarget "HTTPyzhTests" */,
 			);
-			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F3A0BB542DCCBBAD007B303B /* XCRemoteSwiftPackageReference "ScrechKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TopScrech/ScrechKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F3A0BB522DCCBB4B007B303B /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ScrechKit;
+		};
+		F3A0BB552DCCBBAD007B303B /* ScrechKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F3A0BB542DCCBBAD007B303B /* XCRemoteSwiftPackageReference "ScrechKit" */;
+			productName = ScrechKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F336BA022B277291002CBC12 /* Project object */;
 }
