@@ -15,6 +15,7 @@
 		F336BA412B278F9F002CBC12 /* Request Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336BA402B278F9F002CBC12 /* Request Model.swift */; };
 		F3A0BB532DCCBB4B007B303B /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A0BB522DCCBB4B007B303B /* ScrechKit */; };
 		F3A0BB562DCCBBAD007B303B /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A0BB552DCCBBAD007B303B /* ScrechKit */; };
+		F3F557492E4B5AC7006E1669 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F3F557482E4B5AC7006E1669 /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		F336BA3B2B2772D9002CBC12 /* Home View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home View.swift"; sourceTree = "<group>"; };
 		F336BA3E2B278EAC002CBC12 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		F336BA402B278F9F002CBC12 /* Request Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Request Model.swift"; sourceTree = "<group>"; };
+		F3F557482E4B5AC7006E1669 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				F336BA0D2B277291002CBC12 /* HTTPyzhApp.swift */,
+				F3F557482E4B5AC7006E1669 /* Localizable.xcstrings */,
 				F336BA3E2B278EAC002CBC12 /* Container.swift */,
 				F336BA3D2B278E8E002CBC12 /* Bundle */,
 				F336BA3B2B2772D9002CBC12 /* Home View.swift */,
@@ -165,6 +168,8 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
+				nl,
 			);
 			mainGroup = F336BA012B277291002CBC12;
 			packageReferences = (
@@ -185,6 +190,7 @@
 		F336BA082B277291002CBC12 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			files = (
+				F3F557492E4B5AC7006E1669 /* Localizable.xcstrings in Resources */,
 				F336BA142B277292002CBC12 /* Assets.xcassets in Resources */,
 			);
 		};
@@ -281,6 +287,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -337,6 +344,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -355,6 +363,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HTTPyzh/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HTTPyzh;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -394,6 +403,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HTTPyzh/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = HTTPyzh;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
