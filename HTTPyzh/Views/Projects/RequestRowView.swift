@@ -33,9 +33,11 @@ struct RequestRowView: View {
                 }
                 .buttonStyle(.plain)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.vertical, 2)
             .padding(.horizontal, 6)
             .background(isSelected ? Color.secondary.opacity(0.16) : Color.clear, in: .rect(cornerRadius: 8))
+            .contentShape(.rect)
         }
         .buttonStyle(.plain)
     }
