@@ -66,9 +66,48 @@ struct RequestEditorView: View {
             rawResponse = ""
             prettyJSONResponse = ""
             htmlResponse = ""
-            requestError = error.localizedDescription
+            requestError = errorMessage(for: error, requestURL: request.url)
         }
 
         isSending = false
+    }
+
+    private func errorMessage(for error: any Error, requestURL: String) -> String {
+        guard let urlError = error as? URLError else {
+            return error.localizedDescription
+        }
+
+        let host = requestHost(from: requestURL)
+
+        switch urlError.code {
+        case .cannotFindHost:
+            return "Could not resolve host \(host) [URLError: \(urlError.errorCode)]\nCheck DNS, VPN, proxy settings, or try another network"
+        case .cannotConnectToHost:
+            return "Could not connect to \(host) [URLError: \(urlError.errorCode)]\nThe host was found but refused or dropped the connection"
+        case .timedOut:
+            return "Request timed out [URLError: \(urlError.errorCode)]\nThe server or network is responding too slowly"
+        case .notConnectedToInternet:
+            return "No internet connection [URLError: \(urlError.errorCode)]"
+        case .secureConnectionFailed:
+            return "TLS handshake failed for \(host) [URLError: \(urlError.errorCode)]\nThe certificate or secure protocol negotiation failed"
+        default:
+            return "\(urlError.localizedDescription) [URLError: \(urlError.errorCode)]"
+        }
+    }
+
+    private func requestHost(from value: String) -> String {
+        let trimmedValue = value.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        guard !trimmedValue.isEmpty else { return "unknown host" }
+
+        if let directHost = URL(string: trimmedValue)?.host, !directHost.isEmpty {
+            return directHost
+        }
+
+        if let prefixedHost = URL(string: "https://\(trimmedValue)")?.host, !prefixedHost.isEmpty {
+            return prefixedHost
+        }
+
+        return "unknown host"
     }
 }
