@@ -11,7 +11,10 @@ struct RequestRowView: View {
             HStack(spacing: 10) {
                 Text(request.method.rawValue)
                     .caption(design: .monospaced)
-                    .secondary()
+                    .foregroundStyle(methodTint)
+                    .padding(.horizontal, 8)
+                    .padding(.vertical, 3)
+                    .background(methodTint.opacity(0.14), in: .capsule)
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(request.name)
@@ -36,5 +39,24 @@ struct RequestRowView: View {
             .background(isSelected ? Color.secondary.opacity(0.16) : Color.clear, in: .rect(cornerRadius: 8))
         }
         .buttonStyle(.plain)
+    }
+
+    private var methodTint: Color {
+        switch request.method {
+        case .get:
+            .green
+        case .post:
+            .blue
+        case .put:
+            .indigo
+        case .patch:
+            .purple
+        case .delete:
+            .red
+        case .head:
+            .orange
+        case .options:
+            .teal
+        }
     }
 }
