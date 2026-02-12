@@ -4,7 +4,8 @@ import SwiftUI
 struct RequestEditorView: View {
     @Bindable var request: HTTPRequest
 
-    @State private var responseDisplayMode: ResponseDisplayMode = .raw
+    @AppStorage("lastResponseDisplayMode")
+    private var responseDisplayModeRaw = ResponseDisplayMode.raw.rawValue
     @State private var statusCode: Int?
     @State private var responseHeaders: [HTTPHeaderItem] = []
     @State private var rawResponse = ""
@@ -25,7 +26,7 @@ struct RequestEditorView: View {
                 )
 
                 RequestResponseSectionView(
-                    displayMode: $responseDisplayMode,
+                    displayMode: responseDisplayModeBinding,
                     statusCode: statusCode,
                     headers: responseHeaders,
                     rawResponse: rawResponse,
@@ -38,6 +39,14 @@ struct RequestEditorView: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .navigationTitle(request.name)
+    }
+
+    private var responseDisplayModeBinding: Binding<ResponseDisplayMode> {
+        Binding {
+            ResponseDisplayMode(rawValue: responseDisplayModeRaw) ?? .raw
+        } set: {
+            responseDisplayModeRaw = $0.rawValue
+        }
     }
 
     private func send() async {

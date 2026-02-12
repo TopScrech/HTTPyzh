@@ -58,6 +58,8 @@ struct RequestConfigurationSectionView: View {
                     .frame(maxWidth: .infinity)
             }
             .buttonStyle(.borderedProminent)
+            .keyboardShortcut(.return, modifiers: [.command])
+            .help("Send (\u{2318}\u{23ce})")
             .disabled(isSending)
         }
         .padding(16)

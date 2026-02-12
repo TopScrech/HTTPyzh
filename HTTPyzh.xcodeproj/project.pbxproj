@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F336BA232B277292002CBC12 /* HTTPyzhTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F336BA222B277292002CBC12 /* HTTPyzhTests.swift */; };
 		F3A0BB532DCCBB4B007B303B /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A0BB522DCCBB4B007B303B /* ScrechKit */; };
 		F3A0BB562DCCBBAD007B303B /* ScrechKit in Frameworks */ = {isa = PBXBuildFile; productRef = F3A0BB552DCCBBAD007B303B /* ScrechKit */; };
 /* End PBXBuildFile section */
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		F336BA0A2B277291002CBC12 /* HTTPyzh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTPyzh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F336BA1E2B277292002CBC12 /* HTTPyzhTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPyzhTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F336BA222B277292002CBC12 /* HTTPyzhTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPyzhTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +44,11 @@
 				F3B64ABD2F3DC95200410CEE /* Exceptions for "HTTPyzh" folder in "HTTPyzh" target */,
 			);
 			path = HTTPyzh;
+			sourceTree = "<group>";
+		};
+		F3B654962F3E262600410CEE /* HTTPyzhTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = HTTPyzhTests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -70,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				F3B64AB42F3DC95200410CEE /* HTTPyzh */,
-				F336BA212B277292002CBC12 /* HTTPyzhTests */,
+				F3B654962F3E262600410CEE /* HTTPyzhTests */,
 				F336BA0B2B277291002CBC12 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,14 +85,6 @@
 				F336BA1E2B277292002CBC12 /* HTTPyzhTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F336BA212B277292002CBC12 /* HTTPyzhTests */ = {
-			isa = PBXGroup;
-			children = (
-				F336BA222B277292002CBC12 /* HTTPyzhTests.swift */,
-			);
-			path = HTTPyzhTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +120,9 @@
 			);
 			dependencies = (
 				F336BA202B277292002CBC12 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F3B654962F3E262600410CEE /* HTTPyzhTests */,
 			);
 			name = HTTPyzhTests;
 			productName = HTTPyzhTests;
@@ -196,7 +194,6 @@
 		F336BA1A2B277292002CBC12 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
-				F336BA232B277292002CBC12 /* HTTPyzhTests.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
