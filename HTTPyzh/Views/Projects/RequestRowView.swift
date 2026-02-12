@@ -12,9 +12,8 @@ struct RequestRowView: View {
                 Text(request.method.rawValue)
                     .caption(design: .monospaced)
                     .foregroundStyle(methodTint)
-                    .padding(.horizontal, 8)
+                    .frame(width: 58)
                     .padding(.vertical, 3)
-                    .background(methodTint.opacity(0.14), in: .capsule)
 
                 VStack(alignment: .leading, spacing: 2) {
                     Text(request.name)
