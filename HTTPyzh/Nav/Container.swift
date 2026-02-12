@@ -18,6 +18,7 @@ struct Container: View {
                 onAddProject: addProject,
                 onToggleFavorite: toggleFavorite(for:)
             )
+            .navigationSplitViewColumnWidth(min: 250, ideal: 280)
         } content: {
             ProjectContentsSidebarView(
                 project: selectedProject,
@@ -27,6 +28,7 @@ struct Container: View {
                 onToggleCollectionFavorite: toggleFavorite(for:),
                 onToggleRequestFavorite: toggleFavorite(for:)
             )
+            .navigationSplitViewColumnWidth(min: 250, ideal: 320)
         } detail: {
             RequestDetailHostView(request: selectedRequest)
         }
