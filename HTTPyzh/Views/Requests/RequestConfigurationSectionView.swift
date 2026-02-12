@@ -28,7 +28,7 @@ struct RequestConfigurationSectionView: View {
                 Picker("Collection", selection: $request.collection) {
                     Text("None")
                         .tag(nil as HTTPRequestCollection?)
-                    
+
                     ForEach(sortedCollections(from: project)) {
                         Text($0.name)
                             .tag(Optional($0))
