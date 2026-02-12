@@ -5,7 +5,15 @@ struct ProjectSidebarView: View {
     @Binding var selectedProject: HTTPProject?
     let onAddProject: () -> Void
     let onToggleFavorite: (HTTPProject) -> Void
-
+    
+    private var favoriteProjects: [HTTPProject] {
+        projects.filter(\.isFavorite)
+    }
+    
+    private var otherProjects: [HTTPProject] {
+        projects.filter { !$0.isFavorite }
+    }
+    
     var body: some View {
         List(selection: $selectedProject) {
             if !favoriteProjects.isEmpty {
@@ -21,7 +29,7 @@ struct ProjectSidebarView: View {
                     }
                 }
             }
-
+            
             Section("Projects") {
                 ForEach(otherProjects) { project in
                     ProjectRowView(
@@ -40,13 +48,5 @@ struct ProjectSidebarView: View {
                 Button("Add Project", systemImage: "plus", action: onAddProject)
             }
         }
-    }
-
-    private var favoriteProjects: [HTTPProject] {
-        projects.filter(\.isFavorite)
-    }
-
-    private var otherProjects: [HTTPProject] {
-        projects.filter { !$0.isFavorite }
     }
 }

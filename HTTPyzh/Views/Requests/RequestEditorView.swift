@@ -40,7 +40,6 @@ struct RequestEditorView: View {
         .navigationTitle(request.name)
     }
 
-    @MainActor
     private func send() async {
         isSending = true
         requestError = ""
