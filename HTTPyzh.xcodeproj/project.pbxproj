@@ -26,6 +26,7 @@
 		F336BA1E2B277292002CBC12 /* HTTPyzhTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HTTPyzhTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B654992F3E58F900410CEE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3B6549A2F3E591000410CEE /* AGENTS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = AGENTS.md; sourceTree = "<group>"; };
+		F3E066962F467FC9001B77CD /* UNLICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = UNLICENSE.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -75,6 +76,7 @@
 			children = (
 				F3B6549A2F3E591000410CEE /* AGENTS.md */,
 				F3B654992F3E58F900410CEE /* README.md */,
+				F3E066962F467FC9001B77CD /* UNLICENSE.txt */,
 				F3B64AB42F3DC95200410CEE /* HTTPyzh */,
 				F3B654962F3E262600410CEE /* HTTPyzhTests */,
 				F336BA0B2B277291002CBC12 /* Products */,
